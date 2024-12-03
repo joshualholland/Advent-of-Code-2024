@@ -7,8 +7,8 @@ import (
 	"slices"
 )
 
-func Day1Part1() {
-	input1, input2, err := utils.GetInputs("./data/lists.txt")
+func day1part1() {
+	input1, input2, err := utils.GetInputs("./data/day1.txt")
 
 	if err != nil {
 		log.Fatal(err)
@@ -20,11 +20,11 @@ func Day1Part1() {
 		diff += utils.Abs(input1[i] - input2[i])
 	}
 
-	fmt.Println(diff)
+	fmt.Println("list difference: ", diff)
 }
 
-func Day1Part2() {
-	input1, input2, err := utils.GetInputs("./data/lists.txt")
+func day1part2() {
+	input1, input2, err := utils.GetInputs("./data/day1.txt")
 
 	if err != nil {
 		log.Fatal(err)
@@ -39,5 +39,10 @@ func Day1Part2() {
 		}
 	}
 
-	fmt.Println(similarity)
+	fmt.Println("list similarity: ", similarity)
+}
+
+func Day1() {
+	day1part1()
+	day1part2()
 }
