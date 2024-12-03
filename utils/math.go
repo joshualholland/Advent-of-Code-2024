@@ -17,3 +17,41 @@ func Occurences(slice []int, value int) int {
 	}
 	return counter
 }
+
+func Max(max int, slice []int) bool {
+	for i := 1; i < len(slice); i++ {
+		if Abs(slice[i]-slice[i-1]) > max {
+			return false
+		}
+	}
+
+	return true
+}
+
+func Min(min int, slice []int) bool {
+	for i := 1; i < len(slice); i++ {
+		if Abs(slice[i]-slice[i-1]) < min {
+			return false
+		}
+	}
+
+	return true
+}
+
+func IncreasingSlice(slice []int) bool {
+	for i := 0; i < len(slice)-1; i++ {
+		if slice[i] < slice[i+1] {
+			return false
+		}
+	}
+	return true
+}
+
+func DecreasingSlice(slice []int) bool {
+	for i := 0; i < len(slice)-1; i++ {
+		if slice[i] > slice[i+1] {
+			return false
+		}
+	}
+	return true
+}
