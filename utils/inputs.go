@@ -3,6 +3,7 @@ package utils
 import (
 	"fmt"
 	"os"
+	"slices"
 )
 
 func GetInputs(filename string) ([]int, []int, error) {
@@ -23,6 +24,9 @@ func GetInputs(filename string) ([]int, []int, error) {
 		input1 = append(input1, left)
 		input2 = append(input2, right)
 	}
+
+	slices.Sort(input1)
+	slices.Sort(input2)
 
 	return input1, input2, err
 }

@@ -6,3 +6,14 @@ func Abs(value int) int {
 	}
 	return value
 }
+
+func Occurences(slice []int, value int) int {
+	counter := 0
+
+	for _, v := range slice {
+		if v == value {
+			counter++
+		}
+	}
+	return counter
+}
